@@ -1,6 +1,6 @@
 package Transport;
 
-public class Transport {
+public class Transport implements Competing {
     private String brand;
     private String model;
     private double engineVolume;
@@ -29,5 +29,20 @@ public class Transport {
 
     public void finishTheMove() {
         System.out.println(brand + " " + model + " заканчивает движение");
+    }
+
+    @Override
+    public void pitStop(double time) {
+
+    }
+
+    @Override
+    public void bestLapTime(double time) {
+
+    }
+
+    @Override
+    public void maximumSpeed(double speed) {
+
     }
 }

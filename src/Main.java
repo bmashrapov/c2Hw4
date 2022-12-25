@@ -1,5 +1,6 @@
 import Transport.Bus;
 import Transport.Car;
+import Transport.DriverD;
 import Transport.Truck;
 
 public class Main {
@@ -17,6 +18,8 @@ public class Main {
         Bus paz = new Bus("PAZ", "P123", 5.4);
         Bus liaz = new Bus("LIAZ", "L123", 5.6);
         lada.startMoving();
+        DriverD<Bus> ilja = new DriverD ("Ilja Andreevich Semenov", true, 12);
+        ilja.drive(solaris);
 
 
     }
