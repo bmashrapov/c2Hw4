@@ -12,6 +12,7 @@ public class Driver {
         this.typeOfLicence = typeOfLicence;
         this.experience = experience;
     }
+
     public void startMoving() {
         System.out.println(fullName + " начинает движение");
     }

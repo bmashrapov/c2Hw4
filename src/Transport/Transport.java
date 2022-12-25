@@ -1,5 +1,7 @@
 package Transport;
 
+import java.util.Objects;
+
 public class Transport implements Competing {
     private String brand;
     private String model;
@@ -43,6 +45,27 @@ public class Transport implements Competing {
 
     @Override
     public void maximumSpeed(double speed) {
+    }
 
+    @Override
+    public String toString() {
+        return "Transport{" +
+                "brand='" + brand + '\'' +
+                ", model='" + model + '\'' +
+                ", engineVolume=" + engineVolume +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Transport transport = (Transport) o;
+        return Double.compare(transport.engineVolume, engineVolume) == 0 && brand.equals(transport.brand) && model.equals(transport.model);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(brand, model, engineVolume);
     }
 }

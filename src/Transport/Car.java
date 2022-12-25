@@ -6,5 +6,5 @@ public class Car<C extends DriverB> extends Transport implements Competing {
     }
 
 
-    }
+}
 
